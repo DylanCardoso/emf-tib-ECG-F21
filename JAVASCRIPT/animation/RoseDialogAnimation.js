@@ -1,11 +1,19 @@
-const canvas = document.getElementById("roseCanvas");
+const canvas = document.getElementById("roseDialog");
 const ctx = canvas.getContext("2d");
 ctx.imageSmoothingEnabled = false;
 
 const spriteData = {
   frames: {
     "Rose 0.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 1.ase": { frame: { x: 40, y: 0, w: 40, h: 73 }, duration: 100 }
+    "Rose 1.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 2.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 3.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 4.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 5.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 6.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 7.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 8.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Rose 9.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
   },
   meta: {
     image: "./../Images/Rose/RoseSprite.png",

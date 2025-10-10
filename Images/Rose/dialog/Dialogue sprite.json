@@ -83,7 +83,7 @@
  "meta": {
   "app": "https://github.com/LibreSprite/LibreSprite/",
   "version": "1.1-dev",
-  "image": "C:\\Users\\Rui\\OneDrive\\Aseprite\\Sprites\\emf-tib-ECG-F21\\Images\\Dialogue sprite.png",
+  "image": "RoseSprite.png",
   "format": "RGBA8888",
   "size": { "w": 124, "h": 150 },
   "scale": "1",
