@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/pnj.css">
     <link rel="stylesheet" href="./CSS/animation/animation_pseudo_npc.css">
+    <script src="./JAVASCRIPT/animation/RoseAnimation.js" defer></script>
 </head>
 
 <body>
@@ -17,25 +18,11 @@
 
     <main>
         <div class="pnjAndTextBox">
-             <h1 class="pseudoNPC">nom_du_NPC_1</h1>
+            <button onclick="playAnimation(10);">Play</button>
+            <h1 class="pseudoNPC">nom_du_NPC_1</h1>
+            <canvas id="roseCanvas" width="40" height="73"></canvas>
         </div>
-       
-
     </main>
-
-    <footer>
-        <ul>
-            <li>
-                <a href="#aPropos">A Propos</a>
-            </li>
-            <li>
-                <a href="#mail">E-mail</a>
-            </li>
-            <li>
-                <a href="#but">But du Site</a>
-            </li>
-        </ul>
-    </footer>
 </body>
 
 </html>

@@ -4,6 +4,12 @@
     height: 650px;
     border: 3pt solid black;
     border-radius: 25px;
+    image-rendering: pixelated;
+}
+
+.pnjAndTextBox img { 
+    width: 400px;
+    height: 600px;
 }
 
 @media screen and (max-width: 1300px) {
