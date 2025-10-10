@@ -1,0 +1,14 @@
+.pseudoNPC  {
+    margin-top: 30px;
+    margin-left: 30px;
+    animation: moveUpDown 5s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}

@@ -2,5 +2,12 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: aliceblue;
+    background-color: rgb(226, 241, 255);
+    width: 100%;
+}
+
+/* style des liens du footer (pas de bleu, pas souligné...)*/
+footer a {
+    color: black;
+    text-decoration: none;
 }

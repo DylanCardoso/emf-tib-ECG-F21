@@ -1,0 +1,37 @@
+.pnjAndTextBox {
+    background-color: aliceblue;
+    width: 1200px;
+    height: 650px;
+    border: 3pt solid black;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 1300px) {
+    .pnjAndTextBox {
+        background-color: aliceblue;
+        width: 800px;
+        height: 500px;
+        border: 3pt solid black;
+        border-radius: 25px;
+    }   
+}
+
+@media screen and (max-width: 850px) {
+    .pnjAndTextBox {
+        background-color: aliceblue;
+        width: 600px;
+        height: 500px;
+        border: 3pt solid black;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .pnjAndTextBox {
+        background-color: aliceblue;
+        width: 500px;
+        height: 650px;
+        border: 3pt solid black;
+        border-radius: 25px;
+    }
+}
