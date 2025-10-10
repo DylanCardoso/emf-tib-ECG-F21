@@ -1,0 +1,73 @@
+{ "frames": {
+   "Rose 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 73 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 73 },
+    "sourceSize": { "w": 40, "h": 73 },
+    "duration": 100
+   },
+   "Rose 1.ase": {
+    "frame": { "x": 40, "y": 0, "w": 40, "h": 73 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 73 },
+    "sourceSize": { "w": 40, "h": 73 },
+    "duration": 100
+   },
+   "Rose 2.ase": {
+    "frame": { "x": 80, "y": 0, "w": 40, "h": 73 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 73 },
+    "sourceSize": { "w": 40, "h": 73 },
+    "duration": 100
+   },
+   "Rose 3.ase": {
+    "frame": { "x": 0, "y": 73, "w": 40, "h": 73 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 73 },
+    "sourceSize": { "w": 40, "h": 73 },
+    "duration": 100
+   },
+   "Rose 4.ase": {
+    "frame": { "x": 40, "y": 73, "w": 40, "h": 73 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 73 },
+    "sourceSize": { "w": 40, "h": 73 },
+    "duration": 100
+   },
+   "Rose 5.ase": {
+    "frame": { "x": 80, "y": 73, "w": 40, "h": 73 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 73 },
+    "sourceSize": { "w": 40, "h": 73 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.1-dev",
+  "image": "C:\\Users\\Rui\\OneDrive\\Aseprite\\Rose sprite.png",
+  "format": "RGBA8888",
+  "size": { "w": 128, "h": 146 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Nrml", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "Hppy", "from": 2, "to": 3, "direction": "forward" },
+   { "name": "Wrry", "from": 4, "to": 5, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "B Hair", "opacity": 255, "blendMode": "normal" },
+   { "name": "Right arm", "opacity": 255, "blendMode": "normal" },
+   { "name": "Body", "opacity": 255, "blendMode": "normal" },
+   { "name": "Left arm", "opacity": 255, "blendMode": "normal" },
+   { "name": "Head Tie", "opacity": 255, "blendMode": "normal" },
+   { "name": "Head / F Hair", "opacity": 255, "blendMode": "normal" },
+   { "name": "Face", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}
