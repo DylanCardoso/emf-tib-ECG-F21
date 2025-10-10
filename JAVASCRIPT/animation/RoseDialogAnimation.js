@@ -1,97 +1,60 @@
-const canvas = document.getElementById("roseDialog");
-const ctx = canvas.getContext("2d");
-ctx.imageSmoothingEnabled = false;
+const canvasDialogRose = document.getElementById("roseDialog");
+const ctxDialog = canvasDialogRose.getContext("2d");
+ctxDialog.imageSmoothingEnabled = false;
 
-const spriteData = {
+const spriteDataDialog = {
   frames: {
-    "Rose 0.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 1.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 2.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 3.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 4.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 5.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 6.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 7.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 8.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
-    "Rose 9.ase": { frame: { x: 0, y: 0, w: 40, h: 73 }, duration: 100 },
+    "Sprite-0001 0.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 1.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 2.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 3.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 4.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 5.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 6.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 7.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 8.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
+    "Sprite-0001 9.": { frameDialog: { x: 0, y: 0, w: 62, h: 30 }, durationDialog: 50 },
   },
-  meta: {
-    image: "./../Images/Rose/RoseSprite.png",
-    size: { w: 80, h: 146 }
+  metaDialog: {
+    imageDialog: "./../Images/Rose/dialog/DialogueSprite.png",
+    size: { w: 124, h: 60 }
   }
 };
 
-const spriteImage = new Image();
-spriteImage.src = spriteData.meta.image;
+const spriteImageDialog = new Image();
+spriteImageDialog.src = spriteDataDialog.metaDialog.imageDialog;
 
-const frames = Object.values(spriteData.frames);
+const framesDialog = Object.values(spriteDataDialog.frames);
+let animationStarted = false;
+let isImageLoadedDialog = false;
 
-let isImageLoaded = false;
-
-spriteImage.onload = () => {
+spriteImageDialog.onload = () => {
   isImageLoaded = true;
-  canvas.width = frames[0].frame.w ;
-  canvas.height = frames[0].frame.h;
+  canvasDialogRose.width = framesDialog[0].frameDialog.w ;
+  canvasDialogRose.height = framesDialog[0].frameDialog.h;
 
-  const f = frames[0].frame;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(spriteImage, f.x, f.y, f.w, f.h, 0, 0, canvas.width, canvas.height);
+  const fDialog = framesDialog[0].frameDialog;
+  ctxDialog.clearRect(0, 0, canvasDialogRose.width, canvasDialogRose.height);
+  ctxDialog.drawImage(spriteImageDialog, fDialog.x, fDialog.y, fDialog.w, fDialog.h, 0, 0, canvasDialogRose.width, canvasDialogRose.height);
 };
 
-function playAnimation(iterations = 1) {
-  if (!isImageLoaded) {
-    spriteImage.onload = () => {
-      isImageLoaded = true;
-      runAnimation(iterations);
-    };
-  } else {
-    runAnimation(iterations);
-  }
-}
+function animateRoseDialog() {
+  if (animationStarted) return;
+  animationStarted = true;
 
-function runAnimation(iterations) {
-  let currentIteration = 0;
-  let currentFrameIndex = 0;
-  let lastTimestamp = 0;
+  let currentFrameIndexDialog = 0;
+  let frameDurationDialog = framesDialog[currentFrameIndexDialog].durationDialog;
+  const totalFramesDialog = framesDialog.length;
 
-  canvas.width = frames[0].frame.w;
-  canvas.height = frames[0].frame.h;
+  const animationIntervalDialog = setInterval(() => {
+    const fDialog = framesDialog[currentFrameIndexDialog].frameDialog;
+    ctxDialog.clearRect(0, 0, canvasDialogRose.width, canvasDialogRose.height);
+    ctxDialog.drawImage(spriteImageDialog, fDialog.x, fDialog.y, fDialog.w, fDialog.h, 0, 0, canvasDialogRose.width, canvasDialogRose.height);
 
-  function animate(timestamp) {
-    if (currentIteration >= iterations) {
-      // Stop l'animation si toutes les itérations sont terminées
-      currentFrameIndex = 0; // On remet la première image
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const f = frames[0].frame;
-      ctx.drawImage(spriteImage, f.x, f.y, f.w, f.h, 0, 0, canvas.width, canvas.height);
-      return; // On arrête l'animation
+    currentFrameIndexDialog++;
+
+    if (currentFrameIndexDialog >= totalFramesDialog) {
+      clearInterval(animationIntervalDialog);
     }
-
-    if (!lastTimestamp) lastTimestamp = timestamp;
-    const frame = frames[currentFrameIndex];
-    const duration = frame.duration;
-
-    if (timestamp - lastTimestamp >= duration) {
-      lastTimestamp = timestamp;
-      currentFrameIndex++;
-
-      if (currentFrameIndex >= frames.length) {
-        currentIteration++;
-        if (currentIteration >= iterations) {
-          currentFrameIndex = 0;
-        } else {
-          currentFrameIndex = 0;
-        }
-      }
-    }
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    const f = frames[currentFrameIndex].frame;
-    ctx.drawImage(spriteImage, f.x, f.y, f.w, f.h, 0, 0, canvas.width, canvas.height);
-
-    requestAnimationFrame(animate);
-  }
-
-  requestAnimationFrame(animate);
+  }, frameDurationDialog);
 }

@@ -4,6 +4,7 @@
     height: 650px;
     border: 3pt solid black;
     border-radius: 25px;
+    image-rendering: pixelated;
 }
 
 .pnjAndTextBox canvas { 
