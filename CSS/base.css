@@ -1,11 +1,24 @@
+@font-face {
+    font-family: "pixelFont";       /* Nom que tu utiliseras dans font-family */
+    src: url("./../CSS/Font/Born2bSportyFS.otf") format("truetype"); /* Chemin relatif depuis le CSS */
+    font-weight: normal;         /* facultatif */
+    font-style: normal;          /* facultatif */
+}
+
+
 html, body {
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h1 {
+    font-family: 'pixelFont', sans-serif;
+    color: wheat;
+    font-size: 40;
+}
+
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
 }

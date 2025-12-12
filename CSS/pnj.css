@@ -1,22 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;background-image: url("./../Images/BG/Background.png");
+}
+
+main {
+    width: 90vw;
+}
+
 .pnjAndTextBox {
-    background-image: url("https://envii.co.uk/cdn/shop/files/AdobeStock_64923013.jpg?v=1740150505&width=1500");
-    width: 1200px;
-    height: 650px;
+    background-image: url("./../Images/BG/Background.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 95vh; 
     border: 3pt solid black;
     border-radius: 25px;
     image-rendering: pixelated;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
-.pnjAndTextBox canvas { 
-    width: 300px;
+.pnjAndTextBox canvas {
+    /* Taille de Rose */
+    width: 100%;
     image-rendering: pixelated;
+}
+
+.dialogRose {
+    padding: 20px;
+}
+
+.pnjAndTextBox .Rose {
+    padding: 20px;
+    overflow: hidden;
 }
 
 #roseDialog {
-    width: 512px;
+    width: 21em;
     image-rendering: pixelated;
 }
 
+.Rose {
+    width: 80%;
+}
+/* 
 @media screen and (max-width: 1300px) {
     .pnjAndTextBox {
         background-color: aliceblue;
@@ -45,4 +74,4 @@
         border: 3pt solid black;
         border-radius: 25px;
     }
-}
+} */
