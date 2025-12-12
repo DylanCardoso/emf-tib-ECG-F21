@@ -12,6 +12,11 @@
     image-rendering: pixelated;
 }
 
+#roseDialog {
+    width: 512px;
+    image-rendering: pixelated;
+}
+
 @media screen and (max-width: 1300px) {
     .pnjAndTextBox {
         background-color: aliceblue;
