@@ -8,7 +8,8 @@ main {
 }
 
 .pnjAndTextBox {
-    background-image: url("./../Images/BG/Background.jpg");
+    /*background-image: url("./../Images/BG/Background.jpg");*/
+    background-color: rgba(0, 0, 0, 0.18);
     background-size: cover;
     width: 100%;
     height: 95vh; 
@@ -40,6 +41,12 @@ main {
 #roseDialog {
     width: 21em;
     image-rendering: pixelated;
+}
+
+#dialogButton {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .Rose {
