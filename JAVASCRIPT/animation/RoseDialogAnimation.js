@@ -18,17 +18,16 @@ function showDialogText() {
 }
 
 function drawTextOnCanvas(text) {
-    ctxDialog.font = "16px Arial";
-    ctxDialog.fillStyle = "white";
-    ctxDialog.strokeStyle = "black";
+    ctxDialog.imageSmoothingEnabled = false;
+
+    ctxDialog.font = "20px pixelFont"; // obligatoire
+    ctxDialog.fillStyle = "black";
     ctxDialog.lineWidth = 2;
 
-    const x = 10;   // position horizontale
-    const y = 20;   // position verticale
-
-    ctxDialog.fillText(text, x, y);
-    ctxDialog.strokeText(text, x, y);
+    ctxDialog.fillText(text, 10, 20);
+    ctxDialog.strokeText(text, 10, 20);
 }
+
 
 // === Frames ===
 const spriteDataDialog = {

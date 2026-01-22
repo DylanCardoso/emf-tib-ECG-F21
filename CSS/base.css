@@ -1,10 +1,9 @@
 @font-face {
     font-family: "pixelFont";       /* Nom que tu utiliseras dans font-family */
-    src: url("./../CSS/Font/Born2bSportyFS.otf") format("truetype"); /* Chemin relatif depuis le CSS */
+    src: url("./../CSS/Font/Born2bSportyFS.otf") format("opentype");
     font-weight: normal;         /* facultatif */
     font-style: normal;          /* facultatif */
 }
-
 
 html, body {
     padding: 0;
